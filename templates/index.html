@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- <h3 style="color: red;">DEBUG: Flask skickade {{ comments|length }} kommentarer</h3> -->
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Æapp – Live Comment Viewer</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #fff;
+      color: #222;
+      margin: 0;
+      text-align: center;
+    }
+    .container {
+      max-width: 750px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+    h1, h2 {
+      margin-top: 20px;
+    }
+    iframe {
+      display: block;
+      margin: 20px auto;
+      border: none;
+    }
+    .info-box {
+      font-size: 14px;
+      color: #444;
+      background-color: #f9f9f9;
+      padding: 12px;
+      border-radius: 8px;
+      border: 2px solid #ddd;
+      margin: 20px auto;
+      width: 90%;
+    }
+    .info-box strong {
+      color: #0077cc;
+    }
+    .comment, .archive-comment {
+      border-bottom: 1px solid #ddd;
+      padding: 10px;
+      text-align: left;
+    }
+    button {
+      margin-top: 10px;
+      padding: 8px 15px;
+      font-size: 14px;
+      cursor: pointer;
+    }
+    footer {
+      margin-top: 40px;
+      padding: 20px 0;
+      background-color: #f1f1f1;
+      font-size: 0.85em;
+      color: #444;
+    }
+    a {
+      color: #0077cc;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+
+<body>
+
+
+
+
+  <div class="container">
+    <h1>Æapp – Your Live Comment Archive</h1>
+
+    <!-- Users can replace the embed below with their own -->
+    <iframe width="320" height="180" src="https://www.youtube.com/embed/DdzbIN9WTiY" allowfullscreen></iframe>
+
+    <div style="text-align: center; font-size: 10px;">
+        <p> Live footage courtesy of the Loch Garten Osprey Zoom Cam, streamed by RSPB.</p>
+
+        </div>
+
+
+
+    <div class="info-box">
+        <p>With heartfelt thanks to Loch Garten – RSPB I'm deeply grateful for the opportunity to use their live chat this summer as part of my experimental project. Their kind support helps bring this digital nature experience to life. 🦅💚
+        </p>
+        <br>
+        <p><strong>Important!</strong> To have your comment displayed here, it <strong>must</strong> include the letter <strong>"Æ"</strong>.
+        This serves as verification that you approve your message being shown on this observation board.
+        Curious about this summer tÆst run? 🏃 Learn more about the Æapp on -> <a href="https://www.youtube.com/watch?v=bFygmsqxCQw" target="_blank">YouTube</a></p>
+    </div>
+
+
+    <h2>Live Comments</h2>
+    <div id="comments"></div>
+    <div id="live-msg" style="color:#999;"></div>
+
+
+
+    <!--
+    <h2>Archived Comments</h2>
+    <button onclick="fetchArchive()">Load Archive</button>
+    <div id="archive"></div>
+    -->
+
+
+    <div class="info-box" style="background:#fffbeb; border-color:#ffd27f; color:#664d03;">
+
+
+    <div style="text-align: center; margin-top: 30px;">
+     <h2><a href="/archive/by_month">📚 Archived Comments</a></h2>
+     <h2><a href="/upload">📷 🎬  Share a Screenshot or a Video</a></h2>
+
+     <a class="back-link" href="/gallery">Media Gallery</a>
+     <p><a href="/comment_popup" target="_blank">Æ-Chat</a></p>
+
+
+
+
+    </div>
+
+
+ <p style="text-align:center;">
+  <a href="{{ url_for('updates') }}">Æ-Updates</a>
+</p>
+
+
+
+
+    <footer>
+      <p>© {{ current_year }} Æapp. All rights reserved.💚 </p>
+      <p>contactaeapp@gmail.com</p>
+      <!--<p>🌍 {{ visitor_count }} unique visitors so far</p>
+      -->
+
+    </footer>
+  </div>
+
+  <script>
+    async function fetchComments() {
+      const res = await fetch("/comments");
+      const data = await res.json();
+      const commentsDiv = document.getElementById("comments");
+      const msgDiv = document.getElementById("live-msg");
+      commentsDiv.innerHTML = "";
+      msgDiv.textContent = "";
+
+      if (data.length === 0) {
+        msgDiv.textContent = "No matching comments yet.";
+        return;
+      }
+
+      data.forEach(comment => {
+        const div = document.createElement("div");
+        div.classList.add("comment");
+        div.innerHTML = `<strong>${comment.author}</strong>: ${comment.message}<br><small>${new Date(comment.timestamp).toLocaleTimeString()}</small>`;
+        commentsDiv.appendChild(div);
+      });
+    }
+
+    async function fetchArchive() {
+      const res = await fetch("/archive");
+      const data = await res.json();
+      const archiveDiv = document.getElementById("archive");
+      archiveDiv.innerHTML = "";
+
+      if (data.length === 0) {
+        archiveDiv.innerHTML = "<p style='color:#999;'>No archived comments yet.</p>";
+        return;
+      }
+
+      data.forEach(comment => {
+        const div = document.createElement("div");
+        div.classList.add("archive-comment");
+        div.innerHTML = `<strong>${comment.author}</strong>: ${comment.message}<br><small>${new Date(comment.timestamp).toLocaleString()}</small>`;
+        archiveDiv.appendChild(div);
+      });
+    }
+
+    setInterval(fetchComments, 5000);
+    fetchComments();
+
+
+  </script>
+</body>
+</html>
