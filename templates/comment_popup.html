@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>🌐 Submit a Comment</title>
+  <style>
+    body { font-family: sans-serif; padding: 2em; max-width: 500px; margin: auto; }
+    input, textarea { width: 100%; margin: 0.5em 0; padding: 8px; }
+    button { padding: 8px 12px; }
+  </style>
+</head>
+<body>
+
+<h2>🌐 Comments from this website</h2>
+<div style="background: #e6f0ff; padding: 1em; border-radius: 8px; margin-bottom: 2em;">
+  <ul>
+    {% for c in site_comments %}
+      <li><strong>{{ c.name }}</strong>: {{ c.text }} <em>({{ c.timestamp }})</em></li>
+    {% endfor %}
+  </ul>
+</div>
+
+<h2>💬 Send a comment</h2>
+<form method="POST" action="/add_comment">
+  <label>Your name:</label>
+  <input type="text" name="name" placeholder="">
+
+  <label>Your comment:</label>
+  <textarea name="text" rows="3" placeholder="Write something... 😊"></textarea>
+
+  <button type="submit">Submit</button>
+</form>
+
+
+
+
+
+
+
+</body>
+</html>

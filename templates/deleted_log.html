@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Deleted Folder Log</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      background-color: #fcfcfc;
+      padding: 20px;
+    }
+
+    h1 {
+      color: #c62828;
+    }
+
+    .log-entry {
+      background-color: #fff1f0;
+      border-left: 4px solid #e53935;
+      margin: 12px 0;
+      padding: 10px;
+      border-radius: 5px;
+    }
+
+    .log-entry strong {
+      color: #d32f2f;
+    }
+
+    .back-link {
+      margin-top: 30px;
+      display: block;
+      text-decoration: none;
+      color: #2c88cc;
+    }
+  </style>
+</head>
+<body>
+  <h1>🗑️ Deleted Folder Log</h1>
+
+  {% if log %}
+    {% for entry in log %}
+      <div class="log-entry">
+        <strong>{{ entry.deleted_at }}</strong> – 
+        <em>{{ entry.deleted_by }}</em> deleted <strong>{{ entry.filename }}</strong> 
+        from category <strong>{{ entry.category }}</strong><br>
+        Description: "{{ entry.description }}"
+      </div>
+    {% endfor %}
+  {% else %}
+    <p>No deletions logged yet.</p>
+  {% endif %}
+
+  <a class="back-link" href="{{ url_for('folder_list') }}">⬅️ Back to folders</a>
+</body>
+</html>

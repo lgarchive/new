@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>{{ filename }}</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      background-color: #f8f8f8;
+      padding: 30px;
+      text-align: center;
+    }
+
+    img {
+      max-width: 90%;
+      max-height: 80vh;
+      border: 4px solid #ccc;
+      margin-bottom: 20px;
+    }
+
+    .meta {
+      font-size: 16px;
+      margin-bottom: 20px;
+    }
+
+    .meta p {
+      margin: 5px 0;
+    }
+
+    .back-link {
+      display: inline-block;
+      margin-top: 20px;
+      text-decoration: none;
+      color: #3388cc;
+      font-weight: bold;
+    }
+
+    .back-link:hover {
+      text-decoration: underline;
+    }
+
+    .delete-form button {
+      background-color: #cc3333;
+      color: white;
+      border: none;
+      padding: 8px 12px;
+      cursor: pointer;
+      margin-top: 15px;
+    }
+
+    .delete-form button:hover {
+      background-color: #a00;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>{{ filename }}</h1>
+
+  <img src="{{ url_for('uploaded_file', filename=filename) }}" alt="{{ filename }}">
+
+  <div class="meta">
+    {% if meta %}
+      <p><strong>Uploaded by:</strong> {{ meta.uploader }}</p>
+      {% if meta.description %}
+        <p><strong>Motive:</strong> {{ meta.description | urlize(target='_blank') }}</p>
+      {% endif %}
+      <p><strong>Time:</strong> {{ meta.timestamp }}</p>
+    {% else %}
+      <p><em>No metadata available</em></p>
+    {% endif %}
+  </div>
+
+  {% if meta.uploader == uploader %}
+    <form class="delete-form" action="{{ url_for('delete', filename=filename) }}" method="post">
+      <button onclick="return confirm('Do you really want to delete the picture {{ filename }}?')">🗑️ Delete the image</button>
+    </form>
+  {% endif %}
+
+
+
+  {% if comments %}
+  <h3 style="margin-top:30px;">💬 Comments</h3>
+  <ul style="list-style-type:none; padding-left:0;">
+    {% for comment in comments %}
+      <li style="margin-bottom:15px; border-bottom:1px solid #ddd; padding-bottom:10px;">
+        <strong>{{ comment.author }}</strong>
+        <span style="color:#666; font-size:0.9em;"> at {{ comment.timestamp }}</span><br>
+        {{ comment.text }}
+      </li>
+    {% endfor %}
+  </ul>
+{% else %}
+  <p style="margin-top:30px;">No comments yet — be the first to say something 💬</p>
+{% endif %}
+
+
+
+
+  <br><br>
+
+  <form action="{{ url_for('image_view', filename=filename) }}" method="post">
+  <input type="text" name="author" placeholder="Your name" required>
+  <textarea name="comment" rows="3" placeholder="Write a comment..." required></textarea>
+  <button type="submit">💬 Post comment</button>
+</form>
+
+
+
+  <a class="back-link" href="{{ url_for('gallery') }}">⬅️ Back to the gallery</a>
+
+</body>
+</html>

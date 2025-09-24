@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Video popup</title>
+
+
+  <style>
+  .modal {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0,0,0,0.85);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+
+.modal-content {
+  background: #fff;
+  padding: 20px;
+  max-width: 700px;
+  width: 90%;
+  border-radius: 10px;
+  color: #333;
+  position: relative;
+}
+
+.modal video {
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.close-btn {
+  position: absolute;
+  top: 10px; right: 15px;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.video-meta {
+  margin-bottom: 20px;
+}
+
+.reactions button {
+  font-size: 18px;
+  margin-right: 6px;
+  cursor: pointer;
+}
+
+.comment-form input,
+.comment-form textarea {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 8px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+}
+
+.comment-form textarea {
+  height: 60px;
+  resize: vertical;
+}
+
+.comment-form button {
+  background-color: #3388cc;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+
+
+  </style>
+</head>
+<body>
+
+
+<!-- video_popup.html -->
+<div id="videoModal" class="modal" style="display:none;">
+  <div class="modal-content">
+    <span onclick="closeVideoModal()" class="close-btn">&times;</span>
+
+    <video id="popupPlayer" controls autoplay>
+      <source id="popupSource" src="">
+    </video>
+
+    <div class="video-meta">
+      <h3 id="popupTitle">Loading title...</h3>
+      <p id="popupDesc">Loading description...</p>
+    </div>
+</div>
+
+
+
+
+<script>
+
+let currentFilename = "";
+
+function openVideoModal(filename) {
+  currentFilename = filename;
+  document.getElementById("videoModal").style.display = "block";
+  document.getElementById("popupSource").src = `/static/uploads/${filename}`;
+  document.getElementById("popupPlayer").load();
+
+  // Metadata
+  fetch(`/video_popup/${filename}`)
+    .then(res => res.json())
+    .then(meta => {
+      document.getElementById("popupTitle").textContent = meta.title;
+      document.getElementById("popupDesc").textContent = meta.description;
+    });
+
+
+}
+
+function closeVideoModal() {
+  document.getElementById("videoModal").style.display = "none";
+  document.getElementById("popupPlayer").pause();
+}
+
+
+</script>
+
+</body>
+</html>
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>🌐 Submit a Comment</title>
+  <style>
+    body { font-family: sans-serif; padding: 2em; max-width: 500px; margin: auto; }
+    input, textarea { width: 100%; margin: 0.5em 0; padding: 8px; }
+    button { padding: 8px 12px; }
+  </style>
+</head>
+<body>
+
+<h2>🌐 Comments from this website</h2>
+<div style="background: #e6f0ff; padding: 1em; border-radius: 8px; margin-bottom: 2em;">
+  <ul>
+
+      <li><strong>Pia</strong>: Just read the live chat... and ISW&#39;s wish just came true :D It should now be possible to upload short videos as well. Please go ahead and try it =) <em>(2025-07-26 15:43)</em></li>
+
+      <li><strong>Pia</strong>: Wohoooo :) Thanks for the confirmation, Holly! I&#39;m not sure if this chat will be useful, but it&#39;s here now.  <em>(2025-07-24 14:21)</em></li>
+
+      <li><strong>Holly29</strong>: It&#39;s working as I can see your message 😊 <em>(2025-07-24 09:02)</em></li>
+
+      <li><strong>Pia</strong>: Trying again, does it work now? :D <em>(2025-07-24 07:42)</em></li>
+
+      <li><strong>Pia</strong>: Test <em>(2025-07-23 20:02)</em></li>
+
+  </ul>
+</div>
+
+<h2>💬 Send a comment</h2>
+<form method="POST" action="/add_comment">
+  <label>Your name:</label>
+  <input type="text" name="name" placeholder="">
+
+  <label>Your comment:</label>
+  <textarea name="text" rows="3" placeholder="Write something... 😊"></textarea>
+
+  <button type="submit">Submit</button>
+</form>
+
+
+
+
+
+
+
+</body>
+</html>

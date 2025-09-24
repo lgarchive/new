@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Upload Your Image or Video</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f3f6fb;
+      padding: 40px;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 15px;
+    }
+
+    .info-text {
+      text-align: center;
+      font-size: 16px;
+      color: #555;
+      margin-bottom: 30px;
+    }
+
+    form {
+      max-width: 500px;
+      margin: 0 auto;
+      background-color: white;
+      padding: 25px;
+      border-radius: 8px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    }
+
+    label {
+      display: block;
+      margin-top: 10px;
+      font-weight: bold;
+    }
+
+    input[type="text"],
+    textarea,
+    select {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      border-radius: 4px;
+      border: 1px solid #ccc;
+      font-size: 14px;
+    }
+
+    .custom-upload-button {
+      display: inline-block;
+      background-color: #3388cc;
+      color: white;
+      padding: 10px 16px;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 16px;
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    .custom-upload-button:hover {
+      background-color: #2675b9;
+    }
+
+    #fileNamePreview {
+      display: block;
+      text-align: center;
+      margin-top: 10px;
+      color: #555;
+      font-style: italic;
+    }
+
+    button {
+      margin-top: 20px;
+      background-color: #3388cc;
+      color: white;
+      border: none;
+      padding: 10px 16px;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+
+    button:hover {
+      background-color: #2675b9;
+    }
+
+    .message {
+      text-align: center;
+      margin-top: 20px;
+      color: #cc3333;
+      font-weight: bold;
+    }
+
+    .filename-preview {
+      text-align: center;
+      margin-top: 10px;
+      color: #555;
+    }
+
+    .back-link {
+      display: block;
+      text-align: center;
+      margin-top: 40px;
+      font-size: 16px;
+      color: #3388cc;
+    }
+
+    .back-link:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+<div style="text-align: center; font-family: sans-serif; max-width: 700px; margin: 0 auto;">
+
+  <h1 style="font-size: 24px;"> 🦅💚 Upload Image or Video </h1>
+
+  <p style="font-size: 16px;">
+    You can upload images (JPG, PNG, GIF) and videos (MP4, WebM). <br> Add your name, a description, and choose a category – or select ‘Other’ and type in your own category.
+  </p>
+
+  <br>
+
+
+  <div style="background-color: #f9f9f9; border-left: 4px solid #6a9fb5; border-radius: 8px; padding: 16px; margin: 20px auto; max-width: 600px; font-family: sans-serif; font-size: 15px; text-align: center;">
+  <strong> About the content here:</strong><br><br>
+  All videos and screenshots shared here come from a specific public live feed featuring ospreys.
+  Users upload their favorite moments – all in a non-commercial spirit, with respect for copyright and the beauty of nature.
+  If you have any questions or would like something removed, you’re always welcome to reach out! contactaeapp@gmail.com
+</div>
+
+  <p style="text-align:center; margin-top:20px;">
+
+      <a class="back-link" href="https://ospreys.pythonanywhere.com/gallery"> View Gallery</a>
+      <a class="back-link" href="https://ospreys.pythonanywhere.com/home"> Home</a>
+  </p>
+
+</div>
+
+
+
+    <form action="{{ url_for('upload') }}" method="post" enctype="multipart/form-data">
+    <label for="fileInput" class="custom-upload-button">Choose file</label>
+    <span id="fileNamePreview">No file chosen</span>
+    <input type="file" name="file" id="fileInput" accept="image/*,video/mp4,video/webm" hidden required>
+
+    <label for="uploader">📝 Your name:</label>
+    <input type="text" name="uploader" id="uploader" required>
+
+    <label for="description">💬 Description:</label>
+    <textarea name="description" id="description" rows="3"></textarea>
+
+    <label for="category">📂 Category:</label>
+    <select name="category" id="category" onchange="toggleCustomCategory()">
+      <option value="Betty">Betty</option>
+      <option value="KL5">KL5</option>
+      <option value="ID">ID</option>
+      <option value="their pastimes">their pastimes</option>
+      <option value="Testfolder ;)">Testfolder ;)</option>
+      <option value="Nature">Nature</option>
+      <option value="Intruders">Intruders</option>
+      <option value="Other">Other</option>
+    </select>
+
+    <div id="customCategoryContainer" style="display:none; margin-top:10px;">
+      <label for="customCategory">🆕 Enter your category:</label>
+      <input type="text" name="customCategory" id="customCategory">
+    </div>
+
+    <button type="submit">🚀 Upload now</button>
+  </form>
+
+  {% if message %}
+    <p class="message">{{ message }}</p>
+  {% endif %}
+
+  {% if filename %}
+    <p class="filename-preview">✅ File uploaded: <strong>{{ filename }}</strong></p>
+  {% endif %}
+
+
+  <script>
+    const fileInput = document.getElementById("fileInput");
+    const preview = document.getElementById("fileNamePreview");
+
+    fileInput.addEventListener("change", function() {
+      preview.textContent = fileInput.files.length > 0
+        ? fileInput.files[0].name
+        : "No file chosen";
+    });
+
+    function toggleCustomCategory() {
+      const categorySelect = document.getElementById("category");
+      const customContainer = document.getElementById("customCategoryContainer");
+      if (categorySelect.value === "Other") {
+        customContainer.style.display = "block";
+      } else {
+        customContainer.style.display = "none";
+        document.getElementById("customCategory").value = "";
+      }
+    }
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>📸 Media Gallery</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f4f4f9;
+      padding: 30px;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .info-text {
+      text-align: center;
+      color: #555;
+      margin-bottom: 30px;
+    }
+
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    .gallery-item {
+      background: #fff;
+      border-radius: 6px;
+      padding: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+      width: 260px;
+      transition: transform 0.2s ease;
+      position: relative;
+    }
+
+    .gallery-item:hover {
+      transform: scale(1.02);
+    }
+
+    .media-thumb {
+      max-width: 100%;
+      border-radius: 4px;
+      margin-bottom: 10px;
+      cursor: pointer;
+    }
+
+    video {
+      width: 100%;
+      border-radius: 4px;
+    }
+
+    .gallery-item p {
+      font-size: 14px;
+      margin: 5px 0;
+    }
+
+    .gallery-item em {
+      color: #777;
+      font-size: 0.85em;
+    }
+
+    button {
+      background-color: #cc3333;
+      color: white;
+      border: none;
+      padding: 6px 10px;
+      border-radius: 4px;
+      cursor: pointer;
+      margin-top: 5px;
+    }
+
+    button:hover {
+      background-color: #a00;
+    }
+
+    .back-link {
+      text-align: center;
+      margin-top: 40px;
+      font-size: 16px;
+      display: block;
+      color: #3388cc;
+    }
+
+    .back-link:hover {
+      text-decoration: underline;
+    }
+
+    .video-popup {
+      position: fixed;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(0,0,0,0.85);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 9999;
+    }
+
+    .popup-content {
+      background: #1c1c1c;
+      padding: 20px;
+      border-radius: 10px;
+      max-width: 90vw;
+      max-height: 90vh;
+      overflow-y: auto;
+      color: white;
+      text-align: left;
+    }
+
+    .popup-content video {
+      width: 100%;
+      border-radius: 8px;
+      margin-bottom: 15px;
+    }
+
+    .popup-content button {
+      background-color: #ccc;
+      color: black;
+      border: none;
+      padding: 6px 10px;
+      border-radius: 4px;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+
+    .popup-meta {
+      font-size: 14px;
+      line-height: 1.5;
+    }
+
+    .popup-meta p {
+      margin: 4px 0;
+    }
+  </style>
+</head>
+<body>
+
+    <h1> 🦅💚  Loch Garten Osprey Zoom Camera – Uploaded Media </h1>
+  <p class="info-text">
+    Click on any image or video to view in full size — images include description, uploader info, and comments. Videos show description and uploader only.
+  </p>
+  <p style="text-align:center; margin-top:20px;">
+
+
+  <p style="text-align:center; margin-top:10px;">
+    <a class="back-link" href="https://ospreys.pythonanywhere.com/home">Home</a>
+  </p>
+  <div style="background-color: #f9f9f9; border-left: 4px solid #6a9fb5; border-radius: 8px; padding: 16px; margin: 20px auto; max-width: 600px; font-family: sans-serif; font-size: 15px; text-align: center;">
+  <strong> About the content here:</strong><br><br>
+  All videos and screenshots shared here come from a specific public live feed featuring ospreys.
+  Users upload their favorite moments – all in a non-commercial spirit, with respect for copyright and the beauty of nature.
+  If you have any questions or would like something removed, you’re always welcome to reach out! contactaeapp@gmail.com
+</div>
+
+
+
+
+
+  <div>
+  {% for category, items in grouped.items() %}
+    <h2 style="text-align:center; margin-top:40px;">📁 {{ category }}</h2>
+    <div class="gallery">
+      {% for filename, meta in items %}
+        <div class="gallery-item" title="Uploaded by {{ meta.uploader }} on {{ meta.timestamp }}">
+
+          {% if meta.type == 'video' %}
+            <div class="media-thumb" onclick="openVideoPopup('{{ url_for('uploaded_file', filename=filename) }}', '{{ meta.uploader }}', `{{ meta.description | default('') }}`, '{{ meta.timestamp }}')">
+              <video muted preload="metadata">
+                <source src="{{ url_for('uploaded_file', filename=filename) }}">
+              </video>
+            </div>
+          {% else %}
+            <a href="{{ url_for('image_view', filename=filename) }}">
+              <img class="media-thumb" src="{{ url_for('uploaded_file', filename=filename) }}" alt="{{ filename }}" loading="lazy">
+            </a>
+          {% endif %}
+
+          <p><strong>{{ meta.uploader }}</strong></p>
+          {% if meta.description %}
+            <p>{{ meta.description }}</p>
+          {% endif %}
+          {% if meta.timestamp %}
+            <p><em>{{ meta.timestamp }}</em></p>
+          {% endif %}
+
+
+        </div>
+      {% endfor %}
+    </div>
+  {% endfor %}
+</div>
+
+
+
+  <script>
+    function openVideoPopup(videoSrc, uploader, description, timestamp) {
+  const popup = document.createElement('div');
+  popup.className = 'video-popup';
+
+  // Kontrollera om currentUser är uppladdaren
+  const currentUser = "{{ uploader }}";  // Flask-variabel från din session
+
+  // Extrahera filnamnet från URL:en
+  const filename = videoSrc.split('/').pop();
+
+  popup.innerHTML = `
+    <div class="popup-content">
+      <video controls autoplay>
+        <source src="${videoSrc}">
+        Your browser does not support the video tag.
+      </video>
+      <div class="popup-meta">
+        <p><strong>Uploaded by:</strong> ${uploader}</p>
+        ${description ? `<p><strong>Description:</strong> ${description}</p>` : ''}
+        <p><em>${timestamp}</em></p>
+      </div>
+      <button onclick="closePopup()">🧊 Close</button>
+      ${uploader === currentUser ? `
+        <form method="POST" action="/delete/${filename}" onsubmit="return confirm('Delete video ${filename}?')">
+          <button style="background-color:#cc3333; color:white; margin-top:10px;">🗑️ Delete this video</button>
+        </form>
+      ` : ''}
+    </div>
+  `;
+  document.body.appendChild(popup);
+}
+
+
+    function closePopup() {
+      const popup = document.querySelector('.video-popup');
+      if (popup) popup.remove();
+    }
+  </script>
+
+</body>
+</html>

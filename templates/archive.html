@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="UTF-8">
+  <title>Comment archive</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      max-width: 800px;
+      margin: 2em auto;
+      padding: 1em;
+    }
+    h1 {
+      color: #444;
+    }
+    select {
+      padding: 6px;
+      margin-right: 1em;
+    }
+    button {
+      padding: 6px 12px;
+    }
+    ul {
+      list-style-type: none;
+      padding-left: 0;
+    }
+    li {
+      margin: 0.5em 0;
+    }
+    em {
+      color: #666;
+    }
+    .no-comments {
+      color: #888;
+    }
+  </style>
+</head>
+<body>
+  <h1>📋 Loch Garten – RSPB, Comment archive 🦅</h1>
+
+  <form method="GET" action="/archive/by_month">
+    <label for="month">Select month:</label>
+    <select name="month" id="month">
+      {% for month in months %}
+        <option value="{{ month }}" {% if selected_month == month %}selected{% endif %}>{{ month }}</option>
+      {% endfor %}
+    </select>
+    <button type="submit">Show</button>
+  </form>
+
+  <hr>
+
+  {% if comments %}
+    <ul>
+      {% for c in comments %}
+        <li><strong>{{ c[0] }}</strong>: {{ c[1] }} <em>({{ c[2] }})</em></li>
+      {% endfor %}
+    </ul>
+  {% else %}
+    <p class="no-comments">No comments were found for this month.</p>
+  {% endif %}
+
+</body>
+</html>

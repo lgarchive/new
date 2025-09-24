@@ -1,0 +1,41 @@
+<form method="GET" action="/archive/by_week">
+  <label for="month">Choose month:</label>
+  
+  <select name="week" id="week">
+  {% for w in weeks %}
+    <option value="{{ w.value }}" {% if selected_week == w.value %}selected{% endif %}>
+      {{ w.label }}
+    </option>
+  {% endfor %}
+</select>
+
+
+  <label for="week">Choose week:</label>
+  <select name="week" id="week">
+    <option value="">-- Choose month first --</option>
+  </select>
+
+  <button type="submit">Show comments</button>
+</form>
+
+
+<script>
+function loadWeeks(month) {
+  fetch("/get_weeks", {
+    method: "POST",
+    headers: { "Content-Type": "application/x-www-form-urlencoded" },
+    body: "month=" + encodeURIComponent(month)
+  })
+  .then(res => res.json())
+  .then(weeks => {
+    const weekSelect = document.getElementById("week");
+    weekSelect.innerHTML = "";
+    weeks.forEach(w => {
+      const opt = document.createElement("option");
+      opt.value = w;
+      opt.textContent = "Vecka " + w.split("-")[1] + " (" + w + ")";
+      weekSelect.appendChild(opt);
+    });
+  });
+}
+</script>
