@@ -1,0 +1,464 @@
+2025-08-16 15:45:43,768: Fetched 0 comments (forced=False)
+2025-08-16 15:46:14,625: Fetched 0 comments (forced=False)
+2025-08-16 15:46:45,112: Fetched 0 comments (forced=False)
+2025-08-16 15:47:49,743: Fetched 0 comments (forced=False)
+2025-08-16 15:48:49,760: Fetched 0 comments (forced=False)
+2025-08-16 15:49:49,808: Fetched 0 comments (forced=False)
+2025-08-16 15:50:49,761: Fetched 0 comments (forced=False)
+2025-08-16 15:51:49,652: Fetched 0 comments (forced=False)
+2025-08-16 15:52:49,735: Fetched 0 comments (forced=False)
+2025-08-16 15:54:07,742: Fetched 0 comments (forced=False)
+2025-08-16 15:54:49,709: Fetched 0 comments (forced=False)
+2025-08-16 15:55:50,392: Fetched 0 comments (forced=False)
+2025-08-16 15:56:49,826: Fetched 0 comments (forced=False)
+2025-08-16 16:51:25,349: Error running WSGI application
+2025-08-16 16:51:25,356: NameError: name 'din_video_id' is not defined
+2025-08-16 16:51:25,356:   File "/var/www/aeapp_pythonanywhere_com_wsgi.py", line 16, in <module>
+2025-08-16 16:51:25,356:     from app import app as application  # <- detta är nyckeln!
+2025-08-16 16:51:25,356:     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2025-08-16 16:51:25,357: 
+2025-08-16 16:51:25,357:   File "/home/AEapp/app.py", line 53, in <module>
+2025-08-16 16:51:25,357:     YOUTUBE_VIDEO_ID=din_video_id
+2025-08-16 16:51:25,357:                      ^^^^^^^^^^^^
+2025-08-16 16:51:25,358: ***************************************************
+2025-08-16 16:51:25,358: If you're seeing an import error and don't know why,
+2025-08-16 16:51:25,358: we have a dedicated help page to help you debug: 
+2025-08-16 16:51:25,358: https://help.pythonanywhere.com/pages/DebuggingImportError/
+2025-08-16 16:51:25,358: ***************************************************
+2025-08-16 16:51:25,503: Error running WSGI application
+2025-08-16 16:51:25,504: NameError: name 'din_video_id' is not defined
+2025-08-16 16:51:25,504:   File "/var/www/aeapp_pythonanywhere_com_wsgi.py", line 16, in <module>
+2025-08-16 16:51:25,504:     from app import app as application  # <- detta är nyckeln!
+2025-08-16 16:51:25,505:     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2025-08-16 16:51:25,505: 
+2025-08-16 16:51:25,505:   File "/home/AEapp/app.py", line 53, in <module>
+2025-08-16 16:51:25,505:     YOUTUBE_VIDEO_ID=din_video_id
+2025-08-16 16:51:25,505:                      ^^^^^^^^^^^^
+2025-08-16 16:51:25,505: ***************************************************
+2025-08-16 16:51:25,505: If you're seeing an import error and don't know why,
+2025-08-16 16:51:25,505: we have a dedicated help page to help you debug: 
+2025-08-16 16:51:25,506: https://help.pythonanywhere.com/pages/DebuggingImportError/
+2025-08-16 16:51:25,506: ***************************************************
+2025-08-16 16:51:29,749: Error running WSGI application
+2025-08-16 16:51:29,750: NameError: name 'din_video_id' is not defined
+2025-08-16 16:51:29,750:   File "/var/www/aeapp_pythonanywhere_com_wsgi.py", line 16, in <module>
+2025-08-16 16:51:29,750:     from app import app as application  # <- detta är nyckeln!
+2025-08-16 16:51:29,750:     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2025-08-16 16:51:29,751: 
+2025-08-16 16:51:29,751:   File "/home/AEapp/app.py", line 53, in <module>
+2025-08-16 16:51:29,751:     YOUTUBE_VIDEO_ID=din_video_id
+2025-08-16 16:51:29,751:                      ^^^^^^^^^^^^
+2025-08-16 16:51:29,751: ***************************************************
+2025-08-16 16:51:29,751: If you're seeing an import error and don't know why,
+2025-08-16 16:51:29,751: we have a dedicated help page to help you debug: 
+2025-08-16 16:51:29,751: https://help.pythonanywhere.com/pages/DebuggingImportError/
+2025-08-16 16:51:29,752: ***************************************************
+2025-08-16 16:55:34,077: Error running WSGI application
+2025-08-16 16:55:34,082: NameError: name 'Cg0KC1FqZzdENlNMY1JJKicKGFVDbDhRZFE5WmFCVDY1dEYxeU9tYk1CURILUWpnN0Q2U0xjUkk' is not defined
+2025-08-16 16:55:34,082:   File "/var/www/aeapp_pythonanywhere_com_wsgi.py", line 16, in <module>
+2025-08-16 16:55:34,082:     from app import app as application  # <- detta är nyckeln!
+2025-08-16 16:55:34,083:     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2025-08-16 16:55:34,083: 
+2025-08-16 16:55:34,083:   File "/home/AEapp/app.py", line 53, in <module>
+2025-08-16 16:55:34,083:     YOUTUBE_VIDEO_ID=Cg0KC1FqZzdENlNMY1JJKicKGFVDbDhRZFE5WmFCVDY1dEYxeU9tYk1CURILUWpnN0Q2U0xjUkk
+2025-08-16 16:55:34,083:                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2025-08-16 16:55:34,083: ***************************************************
+2025-08-16 16:55:34,083: If you're seeing an import error and don't know why,
+2025-08-16 16:55:34,083: we have a dedicated help page to help you debug: 
+2025-08-16 16:55:34,083: https://help.pythonanywhere.com/pages/DebuggingImportError/
+2025-08-16 16:55:34,083: ***************************************************
+2025-08-16 16:58:51,717: Error running WSGI application
+2025-08-16 16:58:51,722: NameError: name 'Cg0KC1FqZzdENlNMY1JJKicKGFVDbDhRZFE5WmFCVDY1dEYxeU9tYk1CURILUWpnN0Q2U0xjUkk' is not defined
+2025-08-16 16:58:51,723:   File "/var/www/aeapp_pythonanywhere_com_wsgi.py", line 16, in <module>
+2025-08-16 16:58:51,723:     from app import app as application  # <- detta är nyckeln!
+2025-08-16 16:58:51,723:     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2025-08-16 16:58:51,723: 
+2025-08-16 16:58:51,723:   File "/home/AEapp/app.py", line 53, in <module>
+2025-08-16 16:58:51,723:     YOUTUBE_VIDEO_ID=Cg0KC1FqZzdENlNMY1JJKicKGFVDbDhRZFE5WmFCVDY1dEYxeU9tYk1CURILUWpnN0Q2U0xjUkk
+2025-08-16 16:58:51,723:                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2025-08-16 16:58:51,723: ***************************************************
+2025-08-16 16:58:51,723: If you're seeing an import error and don't know why,
+2025-08-16 16:58:51,724: we have a dedicated help page to help you debug: 
+2025-08-16 16:58:51,724: https://help.pythonanywhere.com/pages/DebuggingImportError/
+2025-08-16 16:58:51,724: ***************************************************
+2025-08-16 17:05:10,164: Exception on /home [GET]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.13/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.13/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.13/site-packages/flask/app.py", line 878, in full_dispatch_request
+    rv = self.preprocess_request()
+  File "/usr/local/lib/python3.13/site-packages/flask/app.py", line 1253, in preprocess_request
+    rv = self.ensure_sync(before_func)()
+  File "/home/AEapp/app.py", line 106, in maybe_fetch_chat
+    fetched = fetch_live_chat()
+              ^^^^^^^^^^^^^^^
+NameError: name 'fetch_live_chat' is not defined
+2025-08-16 17:15:34,239: Error running WSGI application
+2025-08-16 17:15:34,243: NameError: name 'din_video_id' is not defined
+2025-08-16 17:15:34,244:   File "/var/www/aeapp_pythonanywhere_com_wsgi.py", line 18, in <module>
+2025-08-16 17:15:34,244:     from app import app as application  # <- detta är nyckeln!
+2025-08-16 17:15:34,244:     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2025-08-16 17:15:34,244: 
+2025-08-16 17:15:34,244:   File "/home/AEapp/app.py", line 53, in <module>
+2025-08-16 17:15:34,244:     YOUTUBE_VIDEO_ID=din_video_id
+2025-08-16 17:15:34,244:                      ^^^^^^^^^^^^
+2025-08-16 17:15:34,244: ***************************************************
+2025-08-16 17:15:34,244: If you're seeing an import error and don't know why,
+2025-08-16 17:15:34,244: we have a dedicated help page to help you debug: 
+2025-08-16 17:15:34,245: https://help.pythonanywhere.com/pages/DebuggingImportError/
+2025-08-16 17:15:34,245: ***************************************************
+2025-08-16 17:15:42,425: Error running WSGI application
+2025-08-16 17:15:42,426: NameError: name 'din_video_id' is not defined
+2025-08-16 17:15:42,426:   File "/var/www/aeapp_pythonanywhere_com_wsgi.py", line 18, in <module>
+2025-08-16 17:15:42,427:     from app import app as application  # <- detta är nyckeln!
+2025-08-16 17:15:42,427:     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2025-08-16 17:15:42,427: 
+2025-08-16 17:15:42,427:   File "/home/AEapp/app.py", line 53, in <module>
+2025-08-16 17:15:42,427:     YOUTUBE_VIDEO_ID=din_video_id
+2025-08-16 17:15:42,427:                      ^^^^^^^^^^^^
+2025-08-16 17:15:42,427: ***************************************************
+2025-08-16 17:15:42,428: If you're seeing an import error and don't know why,
+2025-08-16 17:15:42,428: we have a dedicated help page to help you debug: 
+2025-08-16 17:15:42,428: https://help.pythonanywhere.com/pages/DebuggingImportError/
+2025-08-16 17:15:42,428: ***************************************************
+2025-08-16 17:21:24,387: Exception on /home [GET]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.13/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.13/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.13/site-packages/flask/app.py", line 878, in full_dispatch_request
+    rv = self.preprocess_request()
+  File "/usr/local/lib/python3.13/site-packages/flask/app.py", line 1253, in preprocess_request
+    rv = self.ensure_sync(before_func)()
+  File "/home/AEapp/app.py", line 106, in maybe_fetch_chat
+    fetched = fetch_live_chat()
+              ^^^^^^^^^^^^^^^
+NameError: name 'fetch_live_chat' is not defined
+2025-08-16 17:21:24,888: Exception on /home [GET]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.13/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.13/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.13/site-packages/flask/app.py", line 878, in full_dispatch_request
+    rv = self.preprocess_request()
+  File "/usr/local/lib/python3.13/site-packages/flask/app.py", line 1253, in preprocess_request
+    rv = self.ensure_sync(before_func)()
+  File "/home/AEapp/app.py", line 106, in maybe_fetch_chat
+    fetched = fetch_live_chat()
+              ^^^^^^^^^^^^^^^
+NameError: name 'fetch_live_chat' is not defined
+2025-08-16 17:37:24,198: Exception on /home [GET]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.13/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.13/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.13/site-packages/flask/app.py", line 878, in full_dispatch_request
+    rv = self.preprocess_request()
+  File "/usr/local/lib/python3.13/site-packages/flask/app.py", line 1253, in preprocess_request
+    rv = self.ensure_sync(before_func)()
+  File "/home/AEapp/app.py", line 111, in maybe_fetch_chat
+    fetched = fetch_live_chat()
+              ^^^^^^^^^^^^^^^
+NameError: name 'fetch_live_chat' is not defined
+2025-08-16 17:43:14,578: Exception on /home [GET]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.13/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.13/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.13/site-packages/flask/app.py", line 878, in full_dispatch_request
+    rv = self.preprocess_request()
+  File "/usr/local/lib/python3.13/site-packages/flask/app.py", line 1253, in preprocess_request
+    rv = self.ensure_sync(before_func)()
+  File "/home/AEapp/app.py", line 107, in maybe_fetch_chat
+    if force or (now - last_fetch_time > 30):
+                       ^^^^^^^^^^^^^^^
+NameError: name 'last_fetch_time' is not defined
+2025-08-16 17:45:24,760: Exception on /home [GET]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.13/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.13/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.13/site-packages/flask/app.py", line 878, in full_dispatch_request
+    rv = self.preprocess_request()
+  File "/usr/local/lib/python3.13/site-packages/flask/app.py", line 1253, in preprocess_request
+    rv = self.ensure_sync(before_func)()
+  File "/home/AEapp/app.py", line 112, in maybe_fetch_chat
+    fetched = fetch_live_chat()
+              ^^^^^^^^^^^^^^^
+NameError: name 'fetch_live_chat' is not defined
+2025-08-16 17:51:09,040: Exception on /home [GET]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.13/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.13/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.13/site-packages/flask/app.py", line 878, in full_dispatch_request
+    rv = self.preprocess_request()
+  File "/usr/local/lib/python3.13/site-packages/flask/app.py", line 1253, in preprocess_request
+    rv = self.ensure_sync(before_func)()
+  File "/home/AEapp/app.py", line 112, in maybe_fetch_chat
+    fetched = fetch_live_chat()
+              ^^^^^^^^^^^^^^^
+NameError: name 'fetch_live_chat' is not defined
+2025-08-16 17:51:14,284: Exception on /home [GET]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.13/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.13/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.13/site-packages/flask/app.py", line 878, in full_dispatch_request
+    rv = self.preprocess_request()
+  File "/usr/local/lib/python3.13/site-packages/flask/app.py", line 1253, in preprocess_request
+    rv = self.ensure_sync(before_func)()
+  File "/home/AEapp/app.py", line 112, in maybe_fetch_chat
+    fetched = fetch_live_chat()
+              ^^^^^^^^^^^^^^^
+NameError: name 'fetch_live_chat' is not defined
+2025-08-16 18:23:57,998: Error fetching chat: name 'fetch_live_chat' is not defined
+2025-08-16 18:23:58,408: Error fetching chat: name 'fetch_live_chat' is not defined
+2025-08-16 18:24:03,689: Error fetching chat: name 'fetch_live_chat' is not defined
+2025-08-16 18:24:09,133: Error fetching chat: name 'fetch_live_chat' is not defined
+2025-08-16 18:24:13,809: Error fetching chat: name 'fetch_live_chat' is not defined
+2025-08-16 18:24:19,150: Error fetching chat: name 'fetch_live_chat' is not defined
+2025-08-16 18:24:23,993: Error fetching chat: name 'fetch_live_chat' is not defined
+2025-08-16 18:24:29,067: Error fetching chat: name 'fetch_live_chat' is not defined
+2025-08-16 18:24:33,787: Error fetching chat: name 'fetch_live_chat' is not defined
+2025-08-16 18:24:39,117: Error fetching chat: name 'fetch_live_chat' is not defined
+2025-08-16 18:24:43,788: Error fetching chat: name 'fetch_live_chat' is not defined
+2025-08-16 18:24:49,161: Error fetching chat: name 'fetch_live_chat' is not defined
+2025-08-16 18:24:53,809: Error fetching chat: name 'fetch_live_chat' is not defined
+2025-08-16 18:24:58,811: Error fetching chat: name 'fetch_live_chat' is not defined
+2025-08-16 18:25:04,126: Error fetching chat: name 'fetch_live_chat' is not defined
+2025-08-16 18:25:50,087: Error fetching chat: name 'fetch_live_chat' is not defined
+2025-08-16 18:26:50,114: Error fetching chat: name 'fetch_live_chat' is not defined
+2025-08-16 18:27:50,164: Error fetching chat: name 'fetch_live_chat' is not defined
+2025-08-16 18:28:50,163: Error fetching chat: name 'fetch_live_chat' is not defined
+2025-08-16 18:29:50,358: Error fetching chat: name 'fetch_live_chat' is not defined
+2025-08-16 18:30:50,124: Error fetching chat: name 'fetch_live_chat' is not defined
+2025-08-16 18:31:50,080: Error fetching chat: name 'fetch_live_chat' is not defined
+2025-08-16 18:32:50,145: Error fetching chat: name 'fetch_live_chat' is not defined
+2025-08-16 18:33:42,935: Error fetching chat: name 'fetch_live_chat' is not defined
+2025-08-16 18:33:43,421: Error fetching chat: name 'fetch_live_chat' is not defined
+2025-08-16 18:33:44,443: Error fetching chat: name 'fetch_live_chat' is not defined
+2025-08-16 18:33:45,847: Error fetching chat: name 'fetch_live_chat' is not defined
+2025-08-16 18:33:52,214: Error fetching chat: name 'fetch_live_chat' is not defined
+2025-08-16 18:33:56,214: Error fetching chat: name 'fetch_live_chat' is not defined
+2025-08-16 18:34:00,052: Error fetching chat: name 'fetch_live_chat' is not defined
+2025-08-16 18:34:01,830: Error fetching chat: name 'fetch_live_chat' is not defined
+2025-08-16 18:34:07,177: Error fetching chat: name 'fetch_live_chat' is not defined
+2025-08-16 18:34:12,121: Error fetching chat: name 'fetch_live_chat' is not defined
+2025-08-16 18:34:16,826: Error fetching chat: name 'fetch_live_chat' is not defined
+2025-08-16 18:34:22,157: Error fetching chat: name 'fetch_live_chat' is not defined
+2025-08-16 18:34:25,847: Error fetching chat: name 'fetch_live_chat' is not defined
+2025-08-16 18:34:26,616: Error fetching chat: name 'fetch_live_chat' is not defined
+2025-08-16 18:35:31,998: Error fetching chat: name 'fetch_live_chat' is not defined
+2025-08-16 18:35:36,655: Error fetching chat: name 'fetch_live_chat' is not defined
+2025-08-16 18:35:41,960: Error fetching chat: name 'fetch_live_chat' is not defined
+2025-08-16 18:35:46,671: Error fetching chat: name 'fetch_live_chat' is not defined
+2025-08-16 18:35:52,096: Error fetching chat: name 'fetch_live_chat' is not defined
+2025-08-16 18:35:56,809: Error fetching chat: name 'fetch_live_chat' is not defined
+2025-08-16 18:36:02,100: Error fetching chat: name 'fetch_live_chat' is not defined
+2025-08-16 18:36:06,812: Error fetching chat: name 'fetch_live_chat' is not defined
+2025-08-16 18:36:12,056: Error fetching chat: name 'fetch_live_chat' is not defined
+2025-08-16 18:36:16,792: Error fetching chat: name 'fetch_live_chat' is not defined
+2025-08-16 18:36:22,126: Error fetching chat: name 'fetch_live_chat' is not defined
+2025-08-16 18:36:26,807: Error fetching chat: name 'fetch_live_chat' is not defined
+2025-08-16 18:36:32,079: Error fetching chat: name 'fetch_live_chat' is not defined
+2025-08-16 18:36:36,808: Error fetching chat: name 'fetch_live_chat' is not defined
+2025-08-16 18:36:42,144: Error fetching chat: name 'fetch_live_chat' is not defined
+2025-08-16 18:36:46,796: Error fetching chat: name 'fetch_live_chat' is not defined
+2025-08-16 18:37:50,080: Error fetching chat: name 'fetch_live_chat' is not defined
+2025-08-16 18:41:06,617: Error fetching chat: name 'fetch_live_chat' is not defined
+2025-08-16 18:41:06,797: Error fetching chat: name 'fetch_live_chat' is not defined
+2025-08-16 18:41:11,671: Error fetching chat: name 'fetch_live_chat' is not defined
+2025-08-16 18:41:12,319: Error fetching chat: name 'fetch_live_chat' is not defined
+2025-08-16 18:41:25,245: Error fetching chat: name 'fetch_live_chat' is not defined
+2025-08-16 18:41:25,755: Error fetching chat: name 'fetch_live_chat' is not defined
+2025-08-16 18:41:25,766: Error fetching chat: name 'fetch_live_chat' is not defined
+2025-08-16 18:41:26,023: Error fetching chat: name 'fetch_live_chat' is not defined
+2025-08-16 18:41:26,049: Error fetching chat: name 'fetch_live_chat' is not defined
+2025-08-16 18:41:26,067: Error fetching chat: name 'fetch_live_chat' is not defined
+2025-08-16 18:41:26,072: Error fetching chat: name 'fetch_live_chat' is not defined
+2025-08-16 18:41:26,801: Error fetching chat: name 'fetch_live_chat' is not defined
+2025-08-16 18:41:27,104: Error fetching chat: name 'fetch_live_chat' is not defined
+2025-08-16 18:41:27,751: Error fetching chat: name 'fetch_live_chat' is not defined
+2025-08-16 18:41:29,303: Error fetching chat: name 'fetch_live_chat' is not defined
+2025-08-16 18:41:29,350: Error fetching chat: name 'fetch_live_chat' is not defined
+2025-08-16 18:41:29,505: Error fetching chat: name 'fetch_live_chat' is not defined
+2025-08-16 18:41:32,122: Error fetching chat: name 'fetch_live_chat' is not defined
+2025-08-16 18:41:32,159: Error fetching chat: name 'fetch_live_chat' is not defined
+2025-08-16 18:41:32,362: Error fetching chat: name 'fetch_live_chat' is not defined
+2025-08-16 18:41:32,801: Error fetching chat: name 'fetch_live_chat' is not defined
+2025-08-16 18:41:33,951: Error fetching chat: name 'fetch_live_chat' is not defined
+2025-08-16 18:41:34,186: Error fetching chat: name 'fetch_live_chat' is not defined
+2025-08-16 18:41:36,113: Error fetching chat: name 'fetch_live_chat' is not defined
+2025-08-16 18:41:36,523: Error fetching chat: name 'fetch_live_chat' is not defined
+2025-08-16 18:41:39,605: Error fetching chat: name 'fetch_live_chat' is not defined
+2025-08-16 18:41:39,620: Error fetching chat: name 'fetch_live_chat' is not defined
+2025-08-16 18:41:39,736: Error fetching chat: name 'fetch_live_chat' is not defined
+2025-08-16 18:41:39,772: Error fetching chat: name 'fetch_live_chat' is not defined
+2025-08-16 18:41:39,926: Error fetching chat: name 'fetch_live_chat' is not defined
+2025-08-16 18:41:39,999: Error fetching chat: name 'fetch_live_chat' is not defined
+2025-08-16 18:41:40,001: Error fetching chat: name 'fetch_live_chat' is not defined
+2025-08-16 18:41:40,006: Error fetching chat: name 'fetch_live_chat' is not defined
+2025-08-16 18:41:40,038: Error fetching chat: name 'fetch_live_chat' is not defined
+2025-08-16 18:41:40,078: Error fetching chat: name 'fetch_live_chat' is not defined
+2025-08-16 18:41:40,733: Error fetching chat: name 'fetch_live_chat' is not defined
+2025-08-16 18:41:46,918: Error fetching chat: name 'fetch_live_chat' is not defined
+2025-08-16 18:41:51,892: Error fetching chat: name 'fetch_live_chat' is not defined
+2025-08-16 18:41:56,612: Error fetching chat: name 'fetch_live_chat' is not defined
+2025-08-16 18:42:02,184: Error fetching chat: name 'fetch_live_chat' is not defined
+2025-08-16 18:42:06,606: Error fetching chat: name 'fetch_live_chat' is not defined
+2025-08-16 18:42:08,138: Error fetching chat: name 'fetch_live_chat' is not defined
+2025-08-16 18:42:12,094: Error fetching chat: name 'fetch_live_chat' is not defined
+2025-08-16 18:42:16,804: Error fetching chat: name 'fetch_live_chat' is not defined
+2025-08-16 18:42:22,147: Error fetching chat: name 'fetch_live_chat' is not defined
+2025-08-16 18:42:26,816: Error fetching chat: name 'fetch_live_chat' is not defined
+2025-08-16 18:42:32,078: Error fetching chat: name 'fetch_live_chat' is not defined
+2025-08-16 18:42:36,798: Error fetching chat: name 'fetch_live_chat' is not defined
+2025-08-16 18:42:42,086: Error fetching chat: name 'fetch_live_chat' is not defined
+2025-08-16 18:42:46,813: Error fetching chat: name 'fetch_live_chat' is not defined
+2025-08-16 18:42:52,123: Error fetching chat: name 'fetch_live_chat' is not defined
+2025-08-16 18:42:56,819: Error fetching chat: name 'fetch_live_chat' is not defined
+2025-08-16 18:43:02,086: Error fetching chat: name 'fetch_live_chat' is not defined
+2025-08-16 18:43:06,807: Error fetching chat: name 'fetch_live_chat' is not defined
+2025-08-16 18:43:12,130: Error fetching chat: name 'fetch_live_chat' is not defined
+2025-08-16 18:43:16,787: Error fetching chat: name 'fetch_live_chat' is not defined
+2025-08-16 18:43:22,151: Error fetching chat: name 'fetch_live_chat' is not defined
+2025-08-16 18:43:27,755: Error fetching chat: name 'fetch_live_chat' is not defined
+2025-08-16 21:02:57,800: Error fetching chat: name 'fetch_live_chat' is not defined
+2025-08-16 21:03:03,145: Error fetching chat: name 'fetch_live_chat' is not defined
+2025-08-16 21:03:08,740: Error fetching chat: name 'fetch_live_chat' is not defined
+2025-08-16 21:03:14,054: Error fetching chat: name 'fetch_live_chat' is not defined
+2025-08-16 21:03:18,752: Error fetching chat: name 'fetch_live_chat' is not defined
+2025-08-16 21:03:24,089: Error fetching chat: name 'fetch_live_chat' is not defined
+2025-08-16 21:03:28,749: Error fetching chat: name 'fetch_live_chat' is not defined
+2025-08-16 21:03:34,170: Error fetching chat: name 'fetch_live_chat' is not defined
+2025-08-16 21:03:38,758: Error fetching chat: name 'fetch_live_chat' is not defined
+2025-08-16 21:03:44,304: Error fetching chat: name 'fetch_live_chat' is not defined
+2025-08-16 21:03:48,798: Error fetching chat: name 'fetch_live_chat' is not defined
+2025-08-16 21:03:54,058: Error fetching chat: name 'fetch_live_chat' is not defined
+2025-08-16 21:03:58,752: Error fetching chat: name 'fetch_live_chat' is not defined
+2025-08-16 21:04:04,051: Error fetching chat: name 'fetch_live_chat' is not defined
+2025-08-16 21:04:09,094: Error fetching chat: name 'fetch_live_chat' is not defined
+2025-08-16 21:04:14,081: Error fetching chat: name 'fetch_live_chat' is not defined
+2025-08-16 21:04:18,793: Error fetching chat: name 'fetch_live_chat' is not defined
+2025-08-16 21:04:23,279: Error fetching chat: name 'fetch_live_chat' is not defined
+2025-08-16 21:04:28,088: Error fetching chat: name 'fetch_live_chat' is not defined
+2025-08-16 21:04:34,071: Error fetching chat: name 'fetch_live_chat' is not defined
+2025-08-16 21:04:39,069: Error fetching chat: name 'fetch_live_chat' is not defined
+2025-08-16 21:04:50,082: Error fetching chat: name 'fetch_live_chat' is not defined
+2025-08-16 21:05:50,083: Error fetching chat: name 'fetch_live_chat' is not defined
+2025-08-16 21:06:50,099: Error fetching chat: name 'fetch_live_chat' is not defined
+2025-08-16 21:07:50,062: Error fetching chat: name 'fetch_live_chat' is not defined
+2025-08-16 21:08:06,478: Error fetching chat: name 'fetch_live_chat' is not defined
+2025-08-16 21:08:08,743: Error fetching chat: name 'fetch_live_chat' is not defined
+2025-08-16 21:08:14,136: Error fetching chat: name 'fetch_live_chat' is not defined
+2025-08-16 21:08:18,734: Error fetching chat: name 'fetch_live_chat' is not defined
+2025-08-16 21:08:24,077: Error fetching chat: name 'fetch_live_chat' is not defined
+2025-08-16 21:08:28,753: Error fetching chat: name 'fetch_live_chat' is not defined
+2025-08-16 21:08:34,148: Error fetching chat: name 'fetch_live_chat' is not defined
+2025-08-16 21:08:38,758: Error fetching chat: name 'fetch_live_chat' is not defined
+2025-08-16 21:08:44,141: Error fetching chat: name 'fetch_live_chat' is not defined
+2025-08-16 21:08:48,750: Error fetching chat: name 'fetch_live_chat' is not defined
+2025-08-16 21:08:54,083: Error fetching chat: name 'fetch_live_chat' is not defined
+2025-08-16 21:08:58,740: Error fetching chat: name 'fetch_live_chat' is not defined
+2025-08-16 21:09:04,097: Error fetching chat: name 'fetch_live_chat' is not defined
+2025-08-16 21:09:08,189: Error fetching chat: name 'fetch_live_chat' is not defined
+2025-08-16 21:09:12,513: Error fetching chat: name 'fetch_live_chat' is not defined
+2025-08-16 21:09:13,761: Error fetching chat: name 'fetch_live_chat' is not defined
+2025-08-16 21:09:18,758: Error fetching chat: name 'fetch_live_chat' is not defined
+2025-08-16 21:09:24,133: Error fetching chat: name 'fetch_live_chat' is not defined
+2025-08-16 21:09:28,750: Error fetching chat: name 'fetch_live_chat' is not defined
+2025-08-16 21:09:34,085: Error fetching chat: name 'fetch_live_chat' is not defined
+2025-08-16 21:09:38,755: Error fetching chat: name 'fetch_live_chat' is not defined
+2025-08-16 21:09:44,118: Error fetching chat: name 'fetch_live_chat' is not defined
+2025-08-16 21:09:48,765: Error fetching chat: name 'fetch_live_chat' is not defined
+2025-08-16 21:09:54,106: Error fetching chat: name 'fetch_live_chat' is not defined
+2025-08-16 21:09:58,760: Error fetching chat: name 'fetch_live_chat' is not defined
+2025-08-16 21:10:04,122: Error fetching chat: name 'fetch_live_chat' is not defined
+2025-08-16 21:10:08,742: Error fetching chat: name 'fetch_live_chat' is not defined
+2025-08-16 21:10:14,070: Error fetching chat: name 'fetch_live_chat' is not defined
+2025-08-16 21:10:18,750: Error fetching chat: name 'fetch_live_chat' is not defined
+2025-08-16 21:10:50,043: Error fetching chat: name 'fetch_live_chat' is not defined
+2025-08-16 21:11:50,072: Error fetching chat: name 'fetch_live_chat' is not defined
+2025-08-16 21:12:38,457: Error fetching chat: name 'fetch_live_chat' is not defined
+2025-08-16 21:12:42,798: Error fetching chat: name 'fetch_live_chat' is not defined
+2025-08-16 21:12:48,291: Error fetching chat: name 'fetch_live_chat' is not defined
+2025-08-16 21:12:53,748: Error fetching chat: name 'fetch_live_chat' is not defined
+2025-08-16 21:12:59,037: Error fetching chat: name 'fetch_live_chat' is not defined
+2025-08-16 21:13:03,767: Error fetching chat: name 'fetch_live_chat' is not defined
+2025-08-16 21:13:09,152: Error fetching chat: name 'fetch_live_chat' is not defined
+2025-08-16 21:13:13,748: Error fetching chat: name 'fetch_live_chat' is not defined
+2025-08-16 21:13:19,293: Error fetching chat: name 'fetch_live_chat' is not defined
+2025-08-16 21:13:23,743: Error fetching chat: name 'fetch_live_chat' is not defined
+2025-08-16 21:13:29,040: Error fetching chat: name 'fetch_live_chat' is not defined
+2025-08-16 21:13:33,746: Error fetching chat: name 'fetch_live_chat' is not defined
+2025-08-16 21:13:39,047: Error fetching chat: name 'fetch_live_chat' is not defined
+2025-08-16 21:13:43,741: Error fetching chat: name 'fetch_live_chat' is not defined
+2025-08-16 21:13:50,026: Error fetching chat: name 'fetch_live_chat' is not defined
+2025-08-16 21:14:19,941: Error fetching chat: name 'fetch_live_chat' is not defined
+2025-08-16 21:14:23,121: Error fetching chat: name 'fetch_live_chat' is not defined
+2025-08-16 21:14:28,751: Error fetching chat: name 'fetch_live_chat' is not defined
+2025-08-16 21:14:34,095: Error fetching chat: name 'fetch_live_chat' is not defined
+2025-08-16 21:14:38,755: Error fetching chat: name 'fetch_live_chat' is not defined
+2025-08-16 21:14:44,117: Error fetching chat: name 'fetch_live_chat' is not defined
+2025-08-16 21:14:48,744: Error fetching chat: name 'fetch_live_chat' is not defined
+2025-08-16 21:14:54,075: Error fetching chat: name 'fetch_live_chat' is not defined
+2025-08-16 21:14:58,272: Error fetching chat: name 'fetch_live_chat' is not defined
+2025-08-16 21:15:04,053: Error fetching chat: name 'fetch_live_chat' is not defined
+2025-08-16 21:15:09,078: Error fetching chat: name 'fetch_live_chat' is not defined
+2025-08-16 21:15:14,118: Error fetching chat: name 'fetch_live_chat' is not defined
+2025-08-16 21:15:19,070: Error fetching chat: name 'fetch_live_chat' is not defined
+2025-08-16 21:15:24,093: Error fetching chat: name 'fetch_live_chat' is not defined
+2025-08-16 21:15:50,074: Error fetching chat: name 'fetch_live_chat' is not defined
+2025-08-16 21:16:50,032: Error fetching chat: name 'fetch_live_chat' is not defined
+2025-08-16 21:17:50,088: Error fetching chat: name 'fetch_live_chat' is not defined
+2025-08-16 21:18:50,214: Error fetching chat: name 'fetch_live_chat' is not defined
+2025-08-16 21:19:50,049: Error fetching chat: name 'fetch_live_chat' is not defined
+2025-08-16 21:19:53,803: Error fetching chat: name 'fetch_live_chat' is not defined
+2025-08-16 21:19:57,808: Error fetching chat: name 'fetch_live_chat' is not defined
+2025-08-16 21:20:03,144: Error fetching chat: name 'fetch_live_chat' is not defined
+2025-08-16 21:20:08,741: Error fetching chat: name 'fetch_live_chat' is not defined
+2025-08-16 21:20:14,071: Error fetching chat: name 'fetch_live_chat' is not defined
+2025-08-16 21:20:17,868: Error fetching chat: name 'fetch_live_chat' is not defined
+2025-08-16 21:20:24,076: Error fetching chat: name 'fetch_live_chat' is not defined
+2025-08-16 21:20:28,749: Error fetching chat: name 'fetch_live_chat' is not defined
+2025-08-16 21:20:34,096: Error fetching chat: name 'fetch_live_chat' is not defined
+2025-08-16 21:20:38,751: Error fetching chat: name 'fetch_live_chat' is not defined
+2025-08-16 21:20:44,061: Error fetching chat: name 'fetch_live_chat' is not defined
+2025-08-16 21:20:49,071: Error fetching chat: name 'fetch_live_chat' is not defined
+2025-08-16 21:20:54,078: Error fetching chat: name 'fetch_live_chat' is not defined
+2025-08-16 21:20:58,123: Error fetching chat: name 'fetch_live_chat' is not defined
+2025-08-16 21:21:03,770: Error fetching chat: name 'fetch_live_chat' is not defined
+2025-08-16 21:21:50,061: Error fetching chat: name 'fetch_live_chat' is not defined
+2025-08-16 21:22:50,073: Error fetching chat: name 'fetch_live_chat' is not defined
+2025-08-16 21:23:50,061: Error fetching chat: name 'fetch_live_chat' is not defined
+2025-08-16 21:24:50,175: Error fetching chat: name 'fetch_live_chat' is not defined
+2025-08-16 21:25:50,047: Error fetching chat: name 'fetch_live_chat' is not defined
+2025-08-16 21:26:50,150: Error fetching chat: name 'fetch_live_chat' is not defined
+2025-08-16 21:27:50,074: Error fetching chat: name 'fetch_live_chat' is not defined
+2025-08-16 21:28:50,054: Error fetching chat: name 'fetch_live_chat' is not defined
+2025-08-17 09:04:41,749: Error fetching chat: name 'fetch_live_chat' is not defined
+2025-08-17 09:04:44,639: Error fetching chat: name 'fetch_live_chat' is not defined
+2025-08-17 09:04:46,988: Error fetching chat: name 'fetch_live_chat' is not defined
+2025-08-17 09:04:51,649: Error fetching chat: name 'fetch_live_chat' is not defined
+2025-08-17 09:04:55,722: Error fetching chat: name 'fetch_live_chat' is not defined
+2025-08-17 09:05:02,099: Error fetching chat: name 'fetch_live_chat' is not defined
+2025-08-17 09:46:58,984: Error fetching chat: name 'fetch_live_chat' is not defined
+2025-08-17 09:47:01,517: Error fetching chat: name 'fetch_live_chat' is not defined
+2025-08-17 09:47:06,934: Error fetching chat: name 'fetch_live_chat' is not defined
+2025-08-17 09:47:11,813: Error fetching chat: name 'fetch_live_chat' is not defined
+2025-08-17 09:47:16,836: Error fetching chat: name 'fetch_live_chat' is not defined
+2025-08-17 09:47:21,207: Error fetching chat: name 'fetch_live_chat' is not defined
+2025-08-17 09:47:26,788: Error fetching chat: name 'fetch_live_chat' is not defined
+2025-08-17 09:47:31,857: Error fetching chat: name 'fetch_live_chat' is not defined
+2025-08-17 09:47:36,500: Error fetching chat: name 'fetch_live_chat' is not defined
+2025-08-17 09:47:53,817: Error fetching chat: name 'fetch_live_chat' is not defined
