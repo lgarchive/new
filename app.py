@@ -561,32 +561,6 @@ def post_comment():
         json.dump(comments, f)
     return jsonify({"success": True})
 
-# ❤️ Hämtar reactions
-@app.route("/reactions/<filename>")
-def get_reactions(filename):
-    with open("reactions.json", "r") as f:
-        all_data = json.load(f)
-    return jsonify(all_data.get(filename, {"like": 0, "love": 0, "tear": 0}))
-
-# 📌 Sparar ny reaction
-@app.route("/react", methods=["POST"])
-def post_reaction():
-    data = request.get_json()
-    filename = data["filename"]
-    reaction = data["reaction"]
-    try:
-        with open("reactions.json", "r") as f:
-            reactions = json.load(f)
-    except:
-        reactions = {}
-
-    reactions.setdefault(filename, {"like": 0, "love": 0, "tear": 0})
-    reactions[filename][reaction] += 1
-
-    with open("reactions.json", "w") as f:
-        json.dump(reactions, f)
-
-    return jsonify({"success": True})
 
 
 
