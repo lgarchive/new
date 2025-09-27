@@ -692,10 +692,16 @@ def get_weeks():
     conn.close()
     return jsonify(weeks)
 
+
 @app.route('/updates')
 def updates():
     return render_template('update.html')
 
+
+@app.route('/old')
+def archive_old():
+    # Här kan du filtrera metadata eller kommentarer för juli/augusti 2025
+    return render_template("archive_old.html")
 
 
 # 🧹 Nollställ databas
