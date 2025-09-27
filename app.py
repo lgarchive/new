@@ -437,7 +437,7 @@ def delete(filename):
 
         flash(f"🗑️ Deleted file: {filename}")
         print(f"🗑️ Deleted file: {filename}")
-        return jsonify({'success': True, 'filename': filename})
+        return redirect(url_for('gallery'))
 
     except Exception as e:
         return f"Error deleting file: {e}", 500
